@@ -35,7 +35,6 @@ public class BookServiceTest {
 
     @DynamicPropertySource
     static void setProperties(DynamicPropertyRegistry registry) {
-        System.out.println("********************************");
         System.out.println(mongoDBContainer.getReplicaSetUrl());
         registry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl);
     }
