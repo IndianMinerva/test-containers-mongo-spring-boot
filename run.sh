@@ -1,1 +1,1 @@
-mvn clean package -DskipTests=true && docker kill $(docker ps -q); docker system prune -a --force && docker build -t library . &&  docker-compose -f docker/docker-compose.yml up
+mvn clean package -DskipTests=true && docker kill $(docker ps -q); docker build -t app . &&  docker-compose -f docker/docker-compose.yml up
