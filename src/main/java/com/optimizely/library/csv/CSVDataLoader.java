@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,6 +19,7 @@ import static java.util.stream.Collectors.toList;
 
 
 @Slf4j
+@Component
 public class CSVDataLoader {
     public <T> Optional<List<T>> csvToObjects(String fileName, Function<Map<String, String>, T> mapper) {
 
